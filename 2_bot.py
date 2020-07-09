@@ -24,13 +24,13 @@ def echo_digits(message: Message):
     elif 'Ты долбаёб' in message.text:
         bot.reply_to ( message , 'Сам такой!' )
         return
-    """ 
+
     reply = str(random.random())
     if message.from_user.id in USERS:
         reply += f" {message.from_user}, hello again"
     bot.reply_to(message, reply)
     USERS.add(message.from_user.id)
-    """
+    
 
 @bot.message_handler(content_types=['sticker'])
 def sticker_handler(message: Message):
